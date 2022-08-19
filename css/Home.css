@@ -1070,3 +1070,37 @@ body {
   }
 }
 /*# sourceMappingURL=Home.css.map */
+
+.marqHold {
+  padding: 5px 10px;
+  background: #aaa;
+  color: #fff;
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  text-align: left;
+  overflow: hidden;
+  height: 260px; /* image height+padding */
+}
+
+.marqHold ul { 
+  list-style: none; 
+  padding:0; 
+  margin:0; 
+  position: absolute;
+  white-space: nowrap;
+  left: 110%; /* positions ul off screen to start */
+  animation: marq 25s linear infinite; /* 8s = 8 seconds, adjust as desired */
+}
+
+.marqHold ul li { 
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  padding: 0px;
+}
+
+@keyframes marq {
+from { left: 110%; }
+to { left: -248%; } /* increase/decrease to set point where animation restarts */
+}
